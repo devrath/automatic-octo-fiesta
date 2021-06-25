@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.example.code.R
+import com.example.code.exampleone.images.ImagesFragment
+import com.example.code.exampleone.lookup.LookupFragment
+import kotlinx.android.synthetic.main.fragment_example_one.*
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
@@ -25,8 +28,19 @@ class ExampleOneFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.button_second).setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+        val images = ImagesFragment()
+        activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.content, images)?.commit()
+        nav_view.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.images -> {
+                    activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.content, images)?.commit()
+                }
+                R.id.lookup -> {
+                    val lookup = LookupFragment()
+                    activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.content, lookup)?.commit()
+                }
+            }
+            true
         }
     }
 }
