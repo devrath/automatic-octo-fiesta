@@ -1,9 +1,9 @@
-package com.example.code.exampleone.lookup
+package com.example.code.exampleone.screens.lookup
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.code.exampleone.logEvent
+import com.example.code.exampleone.utils.logEvent
 import com.example.code.exampleone.network.SpacingOutApi
 import kotlinx.coroutines.launch
 

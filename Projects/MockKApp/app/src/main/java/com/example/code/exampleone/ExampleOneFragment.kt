@@ -5,11 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.fragment.findNavController
 import com.example.code.R
-import com.example.code.exampleone.images.ImagesFragment
-import com.example.code.exampleone.lookup.LookupFragment
+import com.example.code.exampleone.screens.images.ImagesFragment
+import com.example.code.exampleone.screens.lookup.LookupFragment
 import kotlinx.android.synthetic.main.fragment_example_one.*
 
 /**

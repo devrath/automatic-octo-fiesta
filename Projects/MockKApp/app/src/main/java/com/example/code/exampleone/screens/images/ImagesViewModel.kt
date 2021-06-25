@@ -1,9 +1,9 @@
-package com.example.code.exampleone.images
+package com.example.code.exampleone.screens.images
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.code.exampleone.SpacingAnalytics
+import com.example.code.exampleone.utils.SpacingAnalytics
 import com.example.code.exampleone.models.ApodImage
 import kotlinx.coroutines.launch
 

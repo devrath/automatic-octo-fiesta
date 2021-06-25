@@ -1,4 +1,4 @@
-package com.example.code.exampleone.lookup
+package com.example.code.exampleone.screens.lookup
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.example.code.R
 import com.google.android.material.snackbar.Snackbar
-import com.example.code.exampleone.createViewModel
+import com.example.code.exampleone.utils.createViewModel
 import kotlinx.android.synthetic.main.fragment_lookup.*
 import kotlinx.android.synthetic.main.fragment_lookup.view.*
 

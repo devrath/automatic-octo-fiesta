@@ -1,4 +1,4 @@
-package com.example.code.exampleone.images
+package com.example.code.exampleone.screens.images
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
