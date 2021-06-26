@@ -31,7 +31,7 @@ class ImagesViewModelTest {
     fun `check if the fetching images event is logged in analytics`() {
 
         val imageListProvider = mockk<ImageListProvider>()
-        val spacingAnalytics = mockk<SpacingAnalytics>()
+        val spacingAnalytics = spyk<SpacingAnalytics>()
 
         // -----------------------------------------> SUT
         ImagesViewModel(imageListProvider,spacingAnalytics)
