@@ -2,11 +2,9 @@ package com.example.code.exampleone.screens.lookup
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.code.exampleone.models.EarthImage
+import com.example.code.exampleone.utils.logEvent
 import com.example.code.utils.CoroutinesTestRule
-import io.mockk.coEvery
-import io.mockk.every
-import io.mockk.mockk
-import io.mockk.mockkObject
+import io.mockk.*
 import junit.framework.Assert.assertEquals
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Rule
@@ -44,6 +42,23 @@ class LookupViewModelTest {
 
         assertEquals("TestUrl",viewModel.imageLiveData.value)
 
+    }
+
+    @Test
+    fun `An event is logged whenever coordinates are input`() {
+        val mockApi = mockk<SpacingOutApi>()
+
+        mockkObject(SpacingOutApi)
+        mockkStatic("com.example.code.exampleone.utils.UtilsKt")
+
+        every { SpacingOutApi.create() } returns mockApi
+
+        coEvery { mockApi.getEarthImagery(any(), any()) } returns EarthImage("testurl")
+
+        val viewModel = LookupViewModel()
+        viewModel.latLongInput(10f, 10f)
+
+        verify(exactly = 1) { viewModel.logEvent("image retrieved", mapOf("latitude" to "10.0", "longitude" to "10.0"))}
     }
 
 }
