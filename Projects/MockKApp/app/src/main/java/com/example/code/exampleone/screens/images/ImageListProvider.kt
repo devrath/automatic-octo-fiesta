@@ -22,11 +22,16 @@ class ImageListProvider(private val api: SpacingOutApi) {
 
     val deferredImages = mutableListOf<Deferred<ApodImage>>()
 
-    for (i in 0 until numImages) {
+    /*for (i in 0 until numImages) {
       val day = today.minusDays(i.toLong())
       val image = async(Dispatchers.IO) {
         api.getImage(day.format(DateTimeFormatter.ISO_DATE)).execute().body()!!
       }
+      deferredImages.add(image)
+    }*/
+    for (i in 0 until numImages) {
+      val day = today.minusDays(i.toLong())
+      val image = async(Dispatchers.IO) {api.getImage(day.format(DateTimeFormatter.ISO_DATE))}
       deferredImages.add(image)
     }
 

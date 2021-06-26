@@ -2,6 +2,7 @@ package com.example.code.exampleone.screens.images
 
 import com.example.code.exampleone.models.ApodImage
 import com.example.code.exampleone.network.SpacingOutApi
+import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
 import junit.framework.Assert.assertEquals
@@ -29,7 +30,8 @@ class ImageListProviderTest {
         // Here in our case when we call the the function the in interface and get the object the function returns
         // Here only the type matters more than the data in it
         // ANSWERS: This will return whatever the block return whenever the block is executed.
-        every {
+
+        /* every {
             spacingApi.getImage(date = any())
         } answers {
             Calls.response(
@@ -41,6 +43,19 @@ class ImageListProviderTest {
                     url = "www.testurl.com",
                     media_type = "video"
                 )
+            )
+        }*/
+
+        coEvery {
+            spacingApi.getImage(date = any())
+        } answers {
+            ApodImage(
+                    date = "01-01-2020",
+                    explanation = "Image is of some response",
+                    hdurl = "www.testurl.com",
+                    title = "test",
+                    url = "www.testurl.com",
+                    media_type = "video"
             )
         }
 

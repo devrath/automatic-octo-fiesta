@@ -26,8 +26,11 @@ interface SpacingOutApi {
     }
   }
 
+  /*@GET("/planetary/apod")
+  fun getImage(@Query("date") date: String): Call<ApodImage>*/
+
   @GET("/planetary/apod")
-  fun getImage(@Query("date") date: String): Call<ApodImage>
+  suspend fun getImage(@Query("date") date: String): ApodImage
 
   @GET("/planetary/earth/imagery/")
   suspend fun getEarthImagery(@Query("lon") longitude: Float, @Query("lat") latitude: Float): EarthImage
