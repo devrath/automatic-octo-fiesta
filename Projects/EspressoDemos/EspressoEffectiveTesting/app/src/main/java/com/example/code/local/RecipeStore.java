@@ -3,45 +3,52 @@ package com.example.code.local;
 import android.content.Context;
 import android.content.res.AssetManager;
 import com.example.code.data.Recipe;
+
+import org.jetbrains.annotations.NotNull;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * This parses a list of recopies from a asset directory
  */
 public class RecipeStore {
     public final List<Recipe> recipes = new ArrayList<>();
-    
-    public RecipeStore(Context context, String directory) {
-      List<InputStream> streams = getAssetStreams(context.getAssets(), directory);
+    private final Map<String, Recipe> map = new HashMap<>();
 
-      for (InputStream stream : streams) {
-          Recipe recipe = Recipe.readFromStream(stream);
-          if (recipe != null) {
-              recipes.add(recipe);
-          }
-      }
+    public RecipeStore(Context context, String directory) {
+        List<InputStream> streams = getAssetStreams(context.getAssets(), directory);
+
+        for (InputStream stream : streams) {
+            Recipe recipe = Recipe.readFromStream(stream);
+            if (recipe != null) {
+                recipes.add(recipe);
+                map.put(recipe.id, recipe);
+            }
+        }
     }
 
     private static List<InputStream> getAssetStreams(AssetManager manager, String directory) {
-      String[] filenames = getFilenames(manager, directory);
+        String[] filenames = getFilenames(manager, directory);
 
-      List<InputStream> streams = new ArrayList<>();
-      for (String filename : filenames) {
-          File file = new File(directory, filename);
-          try {
-              InputStream stream = manager.open(file.getPath());
-              if (stream != null) {
-                  streams.add(stream);
-              }
-          } catch (IOException e) {
-          }
-      }
+        List<InputStream> streams = new ArrayList<>();
+        for (String filename : filenames) {
+            File file = new File(directory, filename);
+            try {
+                InputStream stream = manager.open(file.getPath());
+                if (stream != null) {
+                    streams.add(stream);
+                }
+            } catch (IOException e) {
+            }
+        }
 
-      return streams;
+        return streams;
     }
 
     private static String[] getFilenames(AssetManager manager, String directory) {
@@ -54,5 +61,9 @@ public class RecipeStore {
         } catch (IOException e) {
             return new String[0];
         }
+    }
+
+    public Recipe getRecipe(String id) {
+        return map.get(id);
     }
 }
