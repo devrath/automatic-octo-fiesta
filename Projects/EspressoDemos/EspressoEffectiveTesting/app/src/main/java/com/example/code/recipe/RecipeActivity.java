@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.code.R;
 import com.example.code.data.Recipe;
+import com.example.code.injection.RecipeApplication;
+import com.example.code.local.Favorites;
 import com.example.code.local.RecipeStore;
 import com.example.code.local.SharedPreferencesFavorites;
 
@@ -33,7 +35,8 @@ public class RecipeActivity extends AppCompatActivity {
             return;
         }
 
-        final SharedPreferencesFavorites favorites = new SharedPreferencesFavorites(this);
+        RecipeApplication app = (RecipeApplication) getApplication();
+        final Favorites favorites = app.getFavorites();
         boolean favorite = favorites.get(recipe.id);
 
         titleView.setText(recipe.title);
