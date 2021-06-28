@@ -19,8 +19,8 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class RecipeActivityTest {
-  
-    lateinit var scenario: ActivityScenario<RecipeActivity>
+
+    private lateinit var scenario: ActivityScenario<RecipeActivity>
 
     @Before
     fun setup() {
@@ -35,8 +35,10 @@ class RecipeActivityTest {
 
     @Test
     fun recipeNotFound() {
+        // Check if the default text view notification is displayed
         Espresso.onView(ViewMatchers.withId(R.id.description))
             .check(ViewAssertions.matches(ViewMatchers.withText(R.string.recipe_not_found)))
+        // Check if the the title text view is not displayed - this id is from recycler view row
         Espresso.onView(ViewMatchers.withId(R.id.title))
             .check(ViewAssertions.matches(CoreMatchers.not(ViewMatchers.isDisplayed())))
     }
