@@ -1,19 +1,25 @@
 package com.example.code
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.code.local.RecipeStore
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
-
+        val recyclerView = findViewById<RecyclerView>(R.id.recipes)
+        val store = RecipeStore(this, "recipes")
+        val adapter = RecipeAdapter(store)
+        recyclerView.apply {
+            setAdapter(adapter);
+            setHasFixedSize(true);
+            layoutManager = LinearLayoutManager(this@MainActivity);
+        }
     }
 
 }
