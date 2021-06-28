@@ -1,10 +1,10 @@
-package com.example.code
+package com.example.code.recipeList
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.code.R
 import com.example.code.local.RecipeStore
 
 class MainActivity : AppCompatActivity() {

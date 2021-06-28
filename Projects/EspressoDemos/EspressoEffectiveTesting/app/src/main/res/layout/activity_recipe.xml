@@ -8,7 +8,7 @@
     android:fillViewport="true"
     android:gravity="center"
     android:padding="8dp"
-    tools:context=".RecipeActivity">
+    tools:context=".recipe.RecipeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

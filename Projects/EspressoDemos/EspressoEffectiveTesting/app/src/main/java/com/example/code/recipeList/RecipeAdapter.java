@@ -1,4 +1,4 @@
-package com.example.code;
+package com.example.code.recipeList;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.code.R;
+import com.example.code.recipe.RecipeActivity;
 import com.example.code.data.Recipe;
 import com.example.code.local.RecipeStore;
 

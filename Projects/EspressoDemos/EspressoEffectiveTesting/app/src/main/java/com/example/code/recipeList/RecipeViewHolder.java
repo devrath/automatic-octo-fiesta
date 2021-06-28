@@ -1,4 +1,4 @@
-package com.example.code;
+package com.example.code.recipeList;
 
 import android.view.View;
 import android.widget.TextView;
