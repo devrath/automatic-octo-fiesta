@@ -26,6 +26,10 @@ class LoginActivity : AppCompatActivity(), LoginView {
 
     }
 
+    override fun onUsernamePwdError() {
+        showError(R.string.username_pwd_error)
+    }
+
     override fun onUsernameError() {
         showError(R.string.username_error)
     }

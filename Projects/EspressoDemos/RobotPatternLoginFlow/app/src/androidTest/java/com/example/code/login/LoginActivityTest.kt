@@ -11,38 +11,90 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class LoginActivityTest {
 
-    companion object {
-        const val WRONG_EMAIL = "Wrong email"
-        const val WRONG_PASSWORD = "Wrong password"
-
-        const val CORRECT_EMAIL = "mail@example.com"
-
-    }
-
     @get:Rule
     val activityRule: ActivityTestRule<LoginActivity> = ActivityTestRule(LoginActivity::class.java, true, false)
 
+
     @Test
-    fun loginMissingEmailPassword() {
-        launchScreen()
+    fun checkForEmptyUserName() {
+
+        // ARRANGE
+        val userName = ""
+        val password = "pass"
+
+        // ACT
+        actOnLogin(userName, password)
+
+        // ASSERT
+        assertOnErrorText(string(R.string.username_error))
+    }
+
+    @Test
+    fun checkForEmptyPassword() {
+        // ARRANGE
+        val userName = "mail@example.com"
+        val password = ""
+
+        // ACT
+        actOnLogin(userName, password)
+
+        // ASSERT
+        assertOnErrorText(string(R.string.password_error))
+    }
+
+    @Test
+    fun check_scenario_when_user_name_is_invalid() {
+        // ARRANGE
+        val userName = "wrong@example.com"
+        val password = "pass"
+
+        // ACT
+        actOnLogin(userName, password)
+
+        // ASSERT
+        assertOnErrorText(string(R.string.username_error))
+    }
+
+    @Test
+    fun check_scenario_when_password_is_invalid() {
+        // ARRANGE
+        val userName = "mail@example.com"
+        val password = "wrong password"
+
+        // ACT
+        actOnLogin(userName, password)
+
+        // ASSERT
+        assertOnErrorText(string(R.string.password_error))
+    }
+
+    @Test
+    fun check_scenario_for_successful_login() {
+        // ARRANGE
+        val userName = "mail@example.com"
+        val password = "pass"
+
+        // ACT
+        actOnLogin(userName, password)
+
+        // ASSERT
         login {
-            setEmail(WRONG_EMAIL)
-            setPassword(WRONG_PASSWORD)
-            clickLogin()
-            matchErrorText(string(R.string.login_fail))
+            matchText(R.id.tvName, string(R.string.name_surname))
         }
     }
 
-    @Test
-    fun loginMissingPassword() {
-       /* launchScreen()
+    private fun actOnLogin(userName: String, password: String) {
         login {
-            setEmail(CORRECT_EMAIL)
+            launchScreen()
+            setEmail(userName)
+            setPassword(password)
             clickLogin()
-            matchErrorText(string(R.string.login_fail))
-        }*/
+        }
     }
 
+    private fun assertOnErrorText(message: String) {
+        login { matchErrorText(message) }
+    }
 
     private fun launchScreen() {
         val intent = Intent()

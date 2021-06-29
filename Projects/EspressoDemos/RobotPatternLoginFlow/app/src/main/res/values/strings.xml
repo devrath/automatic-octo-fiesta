@@ -21,5 +21,6 @@
     <string name="ok">OK</string>
     <string name="settings_screen">Settings Screen</string>
     <string name="username_error">Enter valid username</string>
+    <string name="username_pwd_error">Enter valid username and password</string>
     <string name="password_error">Enter valid password</string>
 </resources>

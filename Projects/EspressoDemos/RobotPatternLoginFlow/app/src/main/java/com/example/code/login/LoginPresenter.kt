@@ -7,6 +7,10 @@ class LoginPresenter(var loginView: LoginView,
         loginInteractor.login(username, password, this)
     }
 
+    override fun onUsernamePwdError() {
+        loginView.apply { onUsernamePwdError() }
+    }
+
     override fun onUsernameError() {
         loginView.apply { onUsernameError() }
     }
