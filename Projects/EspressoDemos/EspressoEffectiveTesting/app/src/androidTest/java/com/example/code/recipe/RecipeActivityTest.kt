@@ -47,7 +47,7 @@ class RecipeActivityTest {
         RecipeRobot()
                 .launch(activityRule)
                 .noTitle()
-                .description(R.string.recipe_not_found)
+                ?.description(R.string.recipe_not_found)
     }
 
     @Test
