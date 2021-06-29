@@ -27,11 +27,11 @@ class LoginActivity : AppCompatActivity(), LoginView {
     }
 
     override fun onUsernameError() {
-        showError(R.string.login_fail)
+        showError(R.string.username_error)
     }
 
     override fun onPasswordError() {
-        showError(R.string.missing_fields)
+        showError(R.string.password_error)
     }
 
     override fun onSuccess() {

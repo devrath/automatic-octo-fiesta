@@ -3,7 +3,7 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in">Sign in</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
@@ -20,4 +20,6 @@
     <string name="night_mode">Night Mode</string>
     <string name="ok">OK</string>
     <string name="settings_screen">Settings Screen</string>
+    <string name="username_error">Enter valid username</string>
+    <string name="password_error">Enter valid password</string>
 </resources>
