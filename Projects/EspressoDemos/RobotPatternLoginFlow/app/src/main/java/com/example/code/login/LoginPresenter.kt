@@ -1,19 +1,23 @@
 package com.example.code.login
 
-class LoginPresenter(var view: LoginView) {
+class LoginPresenter(var loginView: LoginView,
+                     private val loginInteractor: LoginInteractor) : LoginInteractor.OnLoginFinishedListener{
 
-    fun login(email: String, password: String) {
-        if (email.isNotEmpty() && password.isNotEmpty()) {
-            if (email == "mail@example.com" && password == "pass") view.loginSuccess() else view.loginFail()
-        } else {
-            view.missingFields()
-        }
+    fun validateCredentials(username: String, password: String) {
+        loginInteractor.login(username, password, this)
     }
 
-}
+    override fun onUsernameError() {
+        loginView.apply { onUsernameError() }
+    }
 
-interface LoginView {
-    fun loginSuccess()
-    fun loginFail()
-    fun missingFields()
+    override fun onPasswordError() {
+        loginView.apply { onPasswordError() }
+    }
+
+    override fun onSuccess() {
+        loginView.apply { onSuccess() }
+    }
+
+
 }

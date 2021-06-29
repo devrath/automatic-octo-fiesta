@@ -7,38 +7,36 @@ import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.code.R
+import com.example.code.databinding.ActivityLoginBinding
 import com.example.code.profile.ProfileActivity
 
 class LoginActivity : AppCompatActivity(), LoginView {
 
-    private val presenter = LoginPresenter(this)
+    private lateinit var binding: ActivityLoginBinding
+    private val presenter = LoginPresenter(this, LoginInteractor())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        setContentView(R.layout.activity_login)
-
-        val username = findViewById<EditText>(R.id.username)
-        val password = findViewById<EditText>(R.id.password)
-        val login = findViewById<Button>(R.id.login)
-
-        login.setOnClickListener {
-            presenter.login(username.text.toString(), password.text.toString())
+        binding.login.setOnClickListener {
+            presenter.validateCredentials(binding.username.text.toString(), binding.password.text.toString())
         }
 
     }
 
-    override fun loginSuccess() {
-        startActivity(Intent(this, ProfileActivity::class.java))
-        finish()
-    }
-
-    override fun loginFail() {
+    override fun onUsernameError() {
         showError(R.string.login_fail)
     }
 
-    override fun missingFields() {
+    override fun onPasswordError() {
         showError(R.string.missing_fields)
+    }
+
+    override fun onSuccess() {
+        startActivity(Intent(this, ProfileActivity::class.java))
+        finish()
     }
 
     private fun showError(msg: Int) {
