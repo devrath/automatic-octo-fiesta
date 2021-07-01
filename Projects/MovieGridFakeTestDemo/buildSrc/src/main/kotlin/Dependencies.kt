@@ -40,6 +40,8 @@ object Libraries {
         const val constraint_layout = "2.0.4"
         const val material = "1.3.0"
         const val hilt = BuildPlugins.Versions.hilt
+        const val retrofit = "2.9.0"
+        const val okHttpLoggingInterceptor = "4.9.0"
     }
     const val kotlin_std_lib      = "org.jetbrains.kotlin:kotlin-stdlib:${Kotlin.standardLibrary}"
     const val app_compat         = "androidx.appcompat:appcompat:${Versions.app_compat}"
@@ -48,6 +50,8 @@ object Libraries {
     const val material          = "com.google.android.material:material:${Versions.material}"
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    const val retrofit = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    const val okHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttpLoggingInterceptor}"
 }
 
 object TestLibraries {

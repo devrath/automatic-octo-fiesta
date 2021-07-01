@@ -42,6 +42,8 @@ dependencies {
     implementation(Libraries.constraint_layout)
     implementation(Libraries.material)
     implementation(Libraries.hilt)
+    implementation(Libraries.retrofit)
+    implementation(Libraries.okHttpLoggingInterceptor)
 
     testImplementation(TestLibraries.junit4)
 
