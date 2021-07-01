@@ -1,6 +1,5 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    val kotlin_version = "1.4.32"
     repositories {
         google()
         jcenter()
@@ -8,8 +7,10 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:4.1.3")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}")
+
+        classpath (BuildPlugins.androidGradlePlugin)
+        classpath (BuildPlugins.kotlinGradlePlugin)
+        classpath (BuildPlugins.hiltGradlePlugin)
     }
 }
 

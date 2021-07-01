@@ -1,7 +1,8 @@
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
+    id(BuildPlugins.androidApplication)
+    id(BuildPlugins.kotlinAndroid)
+    id(BuildPlugins.kotlinKapt)
+    id(BuildPlugins.androidHilt)
 }
 
 android {
@@ -33,11 +34,14 @@ android {
 }
 
 dependencies {
+    kapt(Libraries.hiltCompiler)
+
     implementation(Libraries.kotlin_std_lib)
     implementation(Libraries.app_compat)
     implementation(Libraries.core_ktx)
     implementation(Libraries.constraint_layout)
     implementation(Libraries.material)
+    implementation(Libraries.hilt)
 
     testImplementation(TestLibraries.junit4)
 
