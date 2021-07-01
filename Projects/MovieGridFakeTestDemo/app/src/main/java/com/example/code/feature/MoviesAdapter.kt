@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.code.R
 import com.example.code.core.extension.inflate
 import com.example.code.core.extension.loadFromUrl
+import com.example.code.models.Movie
 import kotlinx.android.synthetic.main.row_movie.view.*
 import javax.inject.Inject
 import kotlin.properties.Delegates
@@ -13,10 +14,9 @@ import kotlin.properties.Delegates
 class MoviesAdapter
 @Inject constructor() : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
-    internal var collection: List<MovieView> by Delegates.observable(emptyList()) { _, _, _ ->
+    internal var collection: List<Movie> by Delegates.observable(emptyList()) { _, _, _ ->
         notifyDataSetChanged()
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(parent.inflate(R.layout.row_movie))
 
@@ -25,7 +25,7 @@ class MoviesAdapter
     override fun getItemCount() = collection.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(movieView: MovieView) {
+        fun bind(movieView: Movie) {
             itemView.moviePoster.loadFromUrl(movieView.poster)
         }
     }

@@ -9,4 +9,5 @@ class GetMovies
 @Inject constructor(private val moviesRepository: MoviesRepository) : UseCase<List<Movie>, UseCase.None>() {
 
     override suspend fun run(params: None) = moviesRepository.movies()
+
 }

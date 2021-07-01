@@ -11,6 +11,7 @@ import com.example.code.core.exception.Failure
 import com.example.code.core.extension.failure
 import com.example.code.core.extension.observe
 import com.example.code.databinding.ActivityMainBinding
+import com.example.code.models.Movie
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         moviesViewModel.loadMovies()
     }
 
-    private fun renderMoviesList(movies: List<MovieView>?) {
+    private fun renderMoviesList(movies: List<Movie>?) {
         moviesAdapter.collection = movies.orEmpty()
     }
 
