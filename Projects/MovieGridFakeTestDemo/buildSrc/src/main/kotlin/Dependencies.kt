@@ -30,6 +30,7 @@ object BuildPlugins {
     const val androidApplication = "com.android.application"
     const val kotlinAndroid = "kotlin-android"
     const val kotlinKapt = "kotlin-kapt"
+    const val kotlinAndroidExtensions = "kotlin-android-extensions"
 }
 
 
@@ -40,8 +41,14 @@ object Libraries {
         const val constraint_layout = "2.0.4"
         const val material = "1.3.0"
         const val hilt = BuildPlugins.Versions.hilt
+        const val glide = "4.11.0"
         const val retrofit = "2.9.0"
         const val okHttpLoggingInterceptor = "4.9.0"
+        const val lifecycle = "2.2.0"
+        const val lifecycleExtensions = "2.1.0"
+        const val fragmentKtx = "1.3.5"
+
+
     }
     const val kotlin_std_lib      = "org.jetbrains.kotlin:kotlin-stdlib:${Kotlin.standardLibrary}"
     const val app_compat         = "androidx.appcompat:appcompat:${Versions.app_compat}"
@@ -50,8 +57,20 @@ object Libraries {
     const val material          = "com.google.android.material:material:${Versions.material}"
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val retrofit = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
     const val okHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okHttpLoggingInterceptor}"
+    const val kotlinCoroutines =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Kotlin.coroutines}"
+    const val kotlinCoroutinesAndroid =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Kotlin.coroutines}"
+    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+    const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+    const val lifecycleExtensions =
+        "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtensions}"
+    const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
+    const val fragmentKtx = "androidx.fragment:fragment-ktx:${Versions.fragmentKtx}"
+
 }
 
 object TestLibraries {

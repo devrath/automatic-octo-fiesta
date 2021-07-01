@@ -1,6 +1,7 @@
 plugins {
     id(BuildPlugins.androidApplication)
     id(BuildPlugins.kotlinAndroid)
+    id(BuildPlugins.kotlinAndroidExtensions)
     id(BuildPlugins.kotlinKapt)
     id(BuildPlugins.androidHilt)
 }
@@ -35,15 +36,24 @@ android {
 
 dependencies {
     kapt(Libraries.hiltCompiler)
+    kapt(Libraries.lifecycleCompiler)
 
     implementation(Libraries.kotlin_std_lib)
     implementation(Libraries.app_compat)
     implementation(Libraries.core_ktx)
     implementation(Libraries.constraint_layout)
     implementation(Libraries.material)
+    implementation(Libraries.glide)
     implementation(Libraries.hilt)
     implementation(Libraries.retrofit)
     implementation(Libraries.okHttpLoggingInterceptor)
+    implementation(Libraries.fragmentKtx)
+
+    implementation(Libraries.viewModel)
+    implementation(Libraries.liveData)
+    implementation(Libraries.lifecycleExtensions)
+    implementation(Libraries.kotlinCoroutines)
+    implementation(Libraries.kotlinCoroutinesAndroid)
 
     testImplementation(TestLibraries.junit4)
 
