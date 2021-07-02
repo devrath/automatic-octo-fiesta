@@ -11,6 +11,7 @@ import javax.inject.Inject
 
 interface MoviesRepository {
 
+
     fun movies(): Either<Failure, List<Movie>>
 
     class Network
