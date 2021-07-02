@@ -50,7 +50,6 @@ class MainActivity : BaseActivity() {
 
     private fun renderMoviesList(movies: List<Movie>?) {
         moviesAdapter.collection = movies.orEmpty()
-        renderFailure(R.string.failure_server_error)
     }
 
     private fun handleFailure(failure: Failure?) {
