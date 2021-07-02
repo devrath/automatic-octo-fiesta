@@ -17,6 +17,10 @@ class MoviesViewModel
     private val _movies: MutableLiveData<List<Movie>> = MutableLiveData()
     val movies: LiveData<List<Movie>> = _movies
 
+    /**
+     * We pass two functions, One is the failure from base-view model
+     * The other is from the successful movie list response
+     */
     fun loadMovies() = getMovies(UseCase.None(), viewModelScope) {
         it.fold(::handleFailure, ::handleMovieList)
     }
