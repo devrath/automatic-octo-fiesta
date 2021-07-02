@@ -10,6 +10,7 @@ import com.example.code.R
 import com.example.code.core.exception.Failure
 import com.example.code.core.extension.failure
 import com.example.code.core.extension.observe
+import com.example.code.core.platform.BaseActivity
 import com.example.code.databinding.ActivityMainBinding
 import com.example.code.models.Movie
 import com.google.android.material.snackbar.Snackbar
@@ -17,7 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
 
     @Inject
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun renderMoviesList(movies: List<Movie>?) {
         moviesAdapter.collection = movies.orEmpty()
+        renderFailure(R.string.failure_server_error)
     }
 
     private fun handleFailure(failure: Failure?) {
@@ -60,18 +62,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun renderFailure(@StringRes message: Int) {
-        notifyWithAction(message, R.string.action_refresh, ::loadMoviesList)
+        notifyWithAction(binding.movieList,message, R.string.action_refresh, ::loadMoviesList)
     }
 
-
-    private fun notifyWithAction(
-        @StringRes message: Int,
-        @StringRes actionText: Int,
-        action: () -> Any
-    ) {
-        val snackBar = Snackbar.make(binding.movieList, message, Snackbar.LENGTH_INDEFINITE)
-        snackBar.setAction(actionText) { _ -> action.invoke() }
-        snackBar.setActionTextColor(ContextCompat.getColor(this@MainActivity, R.color.colorTextPrimary))
-        snackBar.show()
-    }
 }
