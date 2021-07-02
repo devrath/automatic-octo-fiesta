@@ -9,7 +9,7 @@ import javax.inject.Inject
  * According to our convention use case must be run in background
  * This use case is run in the background and returns the result
  * **/
-class GetMovies
+class GetMoviesUseCase
 @Inject constructor(private val moviesRepository: MoviesRepository) : UseCase<List<Movie>, UseCase.None>() {
 
     override suspend fun run(params: None) = moviesRepository.movies()
