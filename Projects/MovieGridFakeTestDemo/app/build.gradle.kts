@@ -56,7 +56,13 @@ dependencies {
     implementation(Libraries.kotlinCoroutinesAndroid)
 
     testImplementation(TestLibraries.junit4)
+    testImplementation(TestLibraries.mockitoKotlin)
+    testImplementation(TestLibraries.mockitoInline)
+    testImplementation(TestLibraries.mockitoCore)
+    testImplementation(TestLibraries.coreTesting)
+    testImplementation(TestLibraries.coroutinesTest)
 
     androidTestImplementation(AndroidTestLibraries.junit)
+    androidTestImplementation(AndroidTestLibraries.testrules)
     androidTestImplementation(AndroidTestLibraries.espresso)
 }
