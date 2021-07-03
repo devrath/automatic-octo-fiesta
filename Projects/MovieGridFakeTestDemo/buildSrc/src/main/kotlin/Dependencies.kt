@@ -81,6 +81,7 @@ object TestLibraries {
         const val mockitoCore = "3.6.0"
         const val coreTesting = "2.1.0"
         const val coroutinesTest = "1.5.0"
+        const val mockServer = "4.9.1"
     }
     const val junit4            = "junit:junit:${Versions.junit4}"
     const val mockitoKotlin     = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
@@ -88,6 +89,7 @@ object TestLibraries {
     const val mockitoCore       = "org.mockito:mockito-core:${Versions.mockitoCore}"
     const val coreTesting       = "androidx.arch.core:core-testing:${Versions.coreTesting}"
     const val coroutinesTest     = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}"
+    const val mockServer     = "com.squareup.okhttp3:mockwebserver:${Versions.mockServer}"
 }
 
 object AndroidTestLibraries {

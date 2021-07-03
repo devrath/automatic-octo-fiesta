@@ -14,7 +14,7 @@ interface MoviesRepository {
 
     fun movies(): Either<Failure, List<Movie>>
 
-    class Network
+    open class Network
     @Inject constructor(
         private val networkHandler: NetworkHandler,
         private val service: MoviesService

@@ -61,6 +61,7 @@ dependencies {
     testImplementation(TestLibraries.mockitoCore)
     testImplementation(TestLibraries.coreTesting)
     testImplementation(TestLibraries.coroutinesTest)
+    testImplementation(TestLibraries.mockServer)
 
     androidTestImplementation(AndroidTestLibraries.junit)
     androidTestImplementation(AndroidTestLibraries.testrules)

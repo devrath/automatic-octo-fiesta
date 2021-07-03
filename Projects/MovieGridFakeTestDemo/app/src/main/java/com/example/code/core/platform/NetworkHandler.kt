@@ -12,9 +12,9 @@ import javax.inject.Singleton
  * Injectable class which returns information about the network connection state.
  */
 @Singleton
-class NetworkHandler
+open class NetworkHandler
 @Inject constructor(@ApplicationContext private val context: Context) {
-    fun isNetworkAvailable(): Boolean {
+    open fun isNetworkAvailable(): Boolean {
         val connectivityManager = context.connectivityManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

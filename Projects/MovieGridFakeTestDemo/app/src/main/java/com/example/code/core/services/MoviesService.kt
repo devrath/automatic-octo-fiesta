@@ -6,7 +6,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class MoviesService
+open class MoviesService
 @Inject constructor(retrofit: Retrofit) : MoviesApi {
 
     private val moviesApi by lazy { retrofit.create(MoviesApi::class.java) }
