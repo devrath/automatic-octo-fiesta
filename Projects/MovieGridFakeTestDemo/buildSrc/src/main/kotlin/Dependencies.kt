@@ -11,7 +11,8 @@ object Apps {
     const val versionName = "1.0"
     const val buildToolsVersion = "30.0.3"
     const val applicationId = "com.example.code"
-    const val testRunner = "androidx.test.runner.AndroidJUnitRunner"
+    //const val testRunner = "androidx.test.runner.AndroidJUnitRunner"
+    const val testRunner = "com.example.code.utils.MockTestRunner"
 }
 
 
@@ -97,8 +98,12 @@ object AndroidTestLibraries {
         const val junit = "1.1.2"
         const val espresso_core = "3.3.0"
         const val testrules = "1.3.0"
+        const val mockServer = "4.9.1"
+        const val okhttp3IdlingResource = "1.0.0"
     }
-    const val junit         = "androidx.test.ext:junit:${Versions.junit}"
-    const val testrules     = "androidx.test:rules:${Versions.testrules}"
-    const val espresso   = "androidx.test.espresso:espresso-core:${Versions.espresso_core}"
+    const val junit             = "androidx.test.ext:junit:${Versions.junit}"
+    const val testrules         = "androidx.test:rules:${Versions.testrules}"
+    const val espresso          = "androidx.test.espresso:espresso-core:${Versions.espresso_core}"
+    const val mockServer        = "com.squareup.okhttp3:mockwebserver:${Versions.mockServer}"
+    const val idlingResource    = "com.jakewharton.espresso:okhttp3-idling-resource:${Versions.okhttp3IdlingResource}"
 }

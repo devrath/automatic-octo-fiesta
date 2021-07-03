@@ -1,6 +1,8 @@
 package com.example.code.core.di
 
 import com.example.code.BuildConfig
+import com.example.code.application.AndroidApplication
+import com.example.code.application.AppConstants
 import com.example.code.core.repositories.MoviesRepository
 import dagger.Module
 import dagger.Provides
@@ -20,7 +22,7 @@ class ApplicationModule {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://raw.githubusercontent.com/devrath/Sample-Data/master/Android-CleanArchitecture-Kotlin/")
+            .baseUrl(AppConstants.BASE_URL)
             .client(createClient())
             .addConverterFactory(GsonConverterFactory.create())
             .build()

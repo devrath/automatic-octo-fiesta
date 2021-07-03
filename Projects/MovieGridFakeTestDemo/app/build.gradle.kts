@@ -66,4 +66,6 @@ dependencies {
     androidTestImplementation(AndroidTestLibraries.junit)
     androidTestImplementation(AndroidTestLibraries.testrules)
     androidTestImplementation(AndroidTestLibraries.espresso)
+    androidTestImplementation(AndroidTestLibraries.mockServer)
+    androidTestImplementation(AndroidTestLibraries.idlingResource)
 }
