@@ -18,7 +18,6 @@ class MainActivityTest : BaseTest(){
         activityRule.launchActivity(null)
     }
 
-
-
+    
 }
 
