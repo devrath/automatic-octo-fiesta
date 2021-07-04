@@ -100,10 +100,19 @@ object AndroidTestLibraries {
         const val testrules = "1.3.0"
         const val mockServer = "4.9.1"
         const val okhttp3IdlingResource = "1.0.0"
+        const val hilt = BuildPlugins.Versions.hilt
     }
-    const val junit             = "androidx.test.ext:junit:${Versions.junit}"
-    const val testrules         = "androidx.test:rules:${Versions.testrules}"
-    const val espresso          = "androidx.test.espresso:espresso-core:${Versions.espresso_core}"
-    const val mockServer        = "com.squareup.okhttp3:mockwebserver:${Versions.mockServer}"
-    const val idlingResource    = "com.jakewharton.espresso:okhttp3-idling-resource:${Versions.okhttp3IdlingResource}"
+    const val junit                 = "androidx.test.ext:junit:${Versions.junit}"
+    const val testrules             = "androidx.test:rules:${Versions.testrules}"
+    const val espresso              = "androidx.test.espresso:espresso-core:${Versions.espresso_core}"
+    const val mockServer            = "com.squareup.okhttp3:mockwebserver:${Versions.mockServer}"
+    const val idlingResource        = "com.jakewharton.espresso:okhttp3-idling-resource:${Versions.okhttp3IdlingResource}"
+    const val hiltAndroidTesting    = "com.google.dagger:hilt-android-testing:${Versions.hilt}"
+}
+
+object KaptAndroidTest {
+    private object Versions {
+        const val hiltAndroidCompiler = "2.35.1"
+    }
+    const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hiltAndroidCompiler}"
 }

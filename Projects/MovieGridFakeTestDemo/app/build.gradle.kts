@@ -35,8 +35,11 @@ android {
 }
 
 dependencies {
+
     kapt(Libraries.hiltCompiler)
     kapt(Libraries.lifecycleCompiler)
+
+    kaptAndroidTest(KaptAndroidTest.hiltAndroidCompiler)
 
     implementation(Libraries.kotlin_std_lib)
     implementation(Libraries.app_compat)
@@ -68,4 +71,6 @@ dependencies {
     androidTestImplementation(AndroidTestLibraries.espresso)
     androidTestImplementation(AndroidTestLibraries.mockServer)
     androidTestImplementation(AndroidTestLibraries.idlingResource)
+    androidTestImplementation(AndroidTestLibraries.hiltAndroidTesting)
+
 }
