@@ -26,7 +26,6 @@ class MainActivityTest {
 
     val mockWebServer = MockWebServer()
 
-
     @get:Rule
     val activityRule = ActivityTestRule(MainActivity::class.java, true, false)
 

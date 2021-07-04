@@ -1,5 +1,6 @@
 package com.example.code.core.di
 
+import android.content.Context
 import com.example.code.BuildConfig
 import com.example.code.application.AndroidApplication
 import com.example.code.application.AppConstants
@@ -7,6 +8,7 @@ import com.example.code.core.repositories.MoviesRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -20,9 +22,9 @@ class ApplicationModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(): Retrofit {
+    fun provideRetrofit(@ApplicationContext application: Context): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(AppConstants.BASE_URL)
+            .baseUrl((application as AndroidApplication).getBaseUrl())
             .client(createClient())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
