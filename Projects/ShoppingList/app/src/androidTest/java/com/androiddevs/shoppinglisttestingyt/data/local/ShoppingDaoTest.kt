@@ -76,6 +76,24 @@ class ShoppingDaoTest {
     }
 
 
+    @Test
+    fun observeTotalPriceSum() = runBlockingTest {
+        // ARRANGE
+        val shoppingItem1 = ShoppingItem("name", 2, 10f, "url", id = 1)
+        val shoppingItem2 = ShoppingItem("name", 4, 5.5f, "url", id = 2)
+        val shoppingItem3 = ShoppingItem("name", 0, 100f, "url", id = 3)
+        // Add the items
+        dao.insertShoppingItem(shoppingItem1)
+        dao.insertShoppingItem(shoppingItem2)
+        dao.insertShoppingItem(shoppingItem3)
+
+        // ACT
+        val totalPriceSum = dao.observeTotalPrice().getOrAwaitValue()
+
+        // ASSERT
+        assertThat(totalPriceSum).isEqualTo(2 * 10f + 4 * 5.5f)
+    }
+
 }
 
 
