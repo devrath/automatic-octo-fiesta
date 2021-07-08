@@ -5,7 +5,8 @@ import com.androiddevs.shoppinglisttestingyt.data.local.ShoppingDao
 import com.androiddevs.shoppinglisttestingyt.data.local.ShoppingItem
 import com.androiddevs.shoppinglisttestingyt.data.remote.PixabayAPI
 import com.androiddevs.shoppinglisttestingyt.data.remote.responses.ImageResponse
-import com.androiddevs.shoppinglisttestingyt.di.Resource
+import com.androiddevs.shoppinglisttestingyt.other.Resource
+import retrofit2.Response
 import javax.inject.Inject
 
 class DefaultShoppingRepository @Inject constructor(
@@ -44,3 +45,17 @@ class DefaultShoppingRepository @Inject constructor(
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
