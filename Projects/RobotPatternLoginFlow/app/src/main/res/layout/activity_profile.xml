@@ -25,4 +25,15 @@
         android:text="@string/mail_example_com"
         android:textSize="18sp" />
 
+    <Button
+        android:id="@+id/btnMovies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/btn_movies_margin_top"
+        android:layout_marginStart="@dimen/btn_movies_margin_start"
+        android:layout_marginEnd="@dimen/btn_movies_margin_end"
+        android:layout_marginLeft="@dimen/btn_movies_margin_start"
+        android:layout_marginRight="@dimen/btn_movies_margin_end"
+        android:text="@string/my_movies"/>
+
 </LinearLayout>
