@@ -36,8 +36,6 @@ android {
 
 dependencies {
 
-    implementation (project( ":shared-sdk"))
-
     kapt(Libraries.hiltCompiler)
     kapt(Libraries.lifecycleCompiler)
 

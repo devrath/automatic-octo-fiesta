@@ -1,4 +1,4 @@
-package com.example.shared
+package com.example.code.core.shared
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.ExperimentalCoroutinesApi

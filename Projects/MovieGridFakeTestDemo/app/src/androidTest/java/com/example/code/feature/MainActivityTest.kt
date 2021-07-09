@@ -2,6 +2,7 @@ package com.example.code.feature
 
 import androidx.test.rule.ActivityTestRule
 import com.example.code.base.BaseTest
+import com.example.code.features.movies.MainActivity
 import org.junit.Rule
 import org.junit.Test
 

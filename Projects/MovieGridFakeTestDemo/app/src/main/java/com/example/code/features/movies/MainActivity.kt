@@ -1,10 +1,8 @@
-package com.example.code.feature
+package com.example.code.features.movies
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.annotation.StringRes
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.code.R
 import com.example.code.core.exception.Failure
@@ -13,7 +11,6 @@ import com.example.code.core.extension.observe
 import com.example.code.core.platform.BaseActivity
 import com.example.code.databinding.ActivityMainBinding
 import com.example.code.models.Movie
-import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

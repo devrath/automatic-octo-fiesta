@@ -1,7 +1,7 @@
-package com.example.shared
+package com.example.code.core.shared
 
 import androidx.lifecycle.MutableLiveData
-import com.example.shared.Result.Success
+import com.example.code.core.shared.Result.Success
 import kotlinx.coroutines.flow.MutableStateFlow
 
 /**

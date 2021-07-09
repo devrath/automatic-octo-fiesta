@@ -1,4 +1,4 @@
-package com.example.shared.dispatcher
+package com.example.code.core.shared.dispatcher
 
 import javax.inject.Qualifier
 

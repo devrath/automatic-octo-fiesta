@@ -8,8 +8,8 @@ import com.example.code.models.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import javax.inject.Inject
-import com.example.shared.Result
-import com.example.shared.data
+import com.example.code.core.shared.Result
+import com.example.code.core.shared.data
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(

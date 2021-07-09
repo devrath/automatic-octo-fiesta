@@ -1,18 +1,18 @@
 package com.example.code.core.usecases
 
 import com.example.code.models.User
-import com.example.shared.SuspendUseCase
-import com.example.shared.dispatcher.IoDispatcher
+import com.example.code.core.shared.SuspendUseCase
+import com.example.code.core.shared.dispatcher.IoDispatcher
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.suspendCancellableCoroutine
 import javax.inject.Inject
-import com.example.shared.Result
+import com.example.code.core.shared.Result
 import java.lang.Exception
 import kotlin.coroutines.resume
 
 class LoginUseCase @Inject constructor(
     @IoDispatcher dispatcher: CoroutineDispatcher
-) : SuspendUseCase<HashMap<String,String>, Result<User>>(dispatcher) {
+) : SuspendUseCase<HashMap<String, String>, Result<User>>(dispatcher) {
 
     override suspend fun execute(parameters: HashMap<String, String>): Result<User> =
 
