@@ -29,6 +29,7 @@
         android:id="@+id/btnMovies"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_marginTop="@dimen/btn_movies_margin_top"
         android:layout_marginStart="@dimen/btn_movies_margin_start"
         android:layout_marginEnd="@dimen/btn_movies_margin_end"
