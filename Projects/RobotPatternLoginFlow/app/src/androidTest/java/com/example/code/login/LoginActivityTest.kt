@@ -1,9 +1,15 @@
 package com.example.code.login
 
+import android.content.Context
 import android.content.Intent
+import androidx.test.core.app.ActivityScenario
+import androidx.test.core.app.ApplicationProvider
+import androidx.test.core.app.launchActivity
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
 import com.example.code.R
+import org.junit.After
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -11,12 +17,22 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class LoginActivityTest {
 
-    @get:Rule
-    val activityRule: ActivityTestRule<LoginActivity> = ActivityTestRule(LoginActivity::class.java, true, false)
+    private lateinit var activityScenario: ActivityScenario<LoginActivity>
 
+    @Before
+    fun setUp() {
+        launchActivityUnderTest()
+    }
+
+    @After
+    fun tearDown() {
+        activityScenario.close()
+    }
 
     @Test
     fun checkForEmptyUserName() {
+
+        launchActivityUnderTest()
 
         // ARRANGE
         val userName = ""
@@ -26,7 +42,7 @@ class LoginActivityTest {
         actOnLogin(userName, password)
 
         // ASSERT
-        assertOnErrorText(string(R.string.username_error))
+        assertOnErrorText(getString(R.string.username_error))
     }
 
     @Test
@@ -39,7 +55,7 @@ class LoginActivityTest {
         actOnLogin(userName, password)
 
         // ASSERT
-        assertOnErrorText(string(R.string.password_error))
+        assertOnErrorText(getString(R.string.password_error))
     }
 
     @Test
@@ -52,7 +68,7 @@ class LoginActivityTest {
         actOnLogin(userName, password)
 
         // ASSERT
-        assertOnErrorText(string(R.string.username_error))
+        assertOnErrorText(getString(R.string.username_error))
     }
 
     @Test
@@ -65,7 +81,7 @@ class LoginActivityTest {
         actOnLogin(userName, password)
 
         // ASSERT
-        assertOnErrorText(string(R.string.password_error))
+        assertOnErrorText(getString(R.string.password_error))
     }
 
     @Test
@@ -79,13 +95,12 @@ class LoginActivityTest {
 
         // ASSERT
         login {
-            matchText(R.id.tvName, string(R.string.name_surname))
+            matchText(R.id.tvName, getString(R.string.name_surname))
         }
     }
 
     private fun actOnLogin(userName: String, password: String) {
         login {
-            launchScreen()
             setEmail(userName)
             setPassword(password)
             clickLogin()
@@ -96,10 +111,14 @@ class LoginActivityTest {
         login { matchErrorText(message) }
     }
 
-    private fun launchScreen() {
-        val intent = Intent()
-        activityRule.launchActivity(intent)
+    /**
+     * Launch the screen
+     */
+    private fun launchActivityUnderTest() {
+        val intent = Intent(ApplicationProvider.getApplicationContext(), LoginActivity::class.java)
+        activityScenario = launchActivity(intent)
     }
 
-    private fun string(res: Int): String = activityRule.activity.getString(res)
+    private fun getString(res: Int): String = ApplicationProvider.getApplicationContext<Context>().getString(res)
+
 }
