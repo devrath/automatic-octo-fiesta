@@ -17,6 +17,7 @@ object Apps {
 
 object ProGuardFiles {
     const val shared_sdk = "consumer-rules.pro"
+    const val network_sdk = "consumer-rules.pro"
 }
 
 object BuildPlugins {
