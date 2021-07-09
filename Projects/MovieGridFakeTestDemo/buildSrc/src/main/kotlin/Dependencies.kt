@@ -15,6 +15,9 @@ object Apps {
     const val testRunner = "com.example.code.utils.MockTestRunner"
 }
 
+object ProGuardFiles {
+    const val shared_sdk = "consumer-rules.pro"
+}
 
 object BuildPlugins {
    object Versions {
@@ -28,6 +31,7 @@ object BuildPlugins {
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Kotlin.standardLibrary}"
     const val androidHilt = "dagger.hilt.android.plugin"
 
+    const val androidLibrary = "com.android.library"
     const val androidApplication = "com.android.application"
     const val kotlinAndroid = "kotlin-android"
     const val kotlinKapt = "kotlin-kapt"
