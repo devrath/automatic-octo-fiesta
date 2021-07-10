@@ -1,9 +1,19 @@
 plugins {
+    // Application Specific Plugins
     id(BuildPlugins.androidApplication)
     id(BuildPlugins.kotlinAndroid)
     id(BuildPlugins.kotlinAndroidExtensions)
     id(BuildPlugins.kotlinKapt)
     id(BuildPlugins.androidHilt)
+
+    //id(BuildPlugins.JACOCO)
+    // id(BuildPlugins.JACOCO_REPORT)
+    // Internal Script plugins
+    id(ScriptPlugins.quality)
+    id(ScriptPlugins.variants)
+
+    id(ScriptPlugins.infrastructure)
+    id(ScriptPlugins.compilation)
 }
 
 android {

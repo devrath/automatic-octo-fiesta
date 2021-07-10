@@ -20,6 +20,13 @@ object ProGuardFiles {
     const val network_sdk = "consumer-rules.pro"
 }
 
+object ScriptPlugins {
+    const val infrastructure = "scripts.infrastructure"
+    const val variants = "scripts.variants"
+    const val quality = "scripts.quality"
+    const val compilation = "scripts.compilation"
+}
+
 object BuildPlugins {
    object Versions {
         const val buildToolsVersion = "4.1.0"
