@@ -15,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
+class MoviesActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
 
 
     @Inject

@@ -2,15 +2,15 @@ package com.example.code.feature
 
 import androidx.test.rule.ActivityTestRule
 import com.example.code.base.BaseTest
-import com.example.code.features.movies.MainActivity
+import com.example.code.features.movies.MoviesActivity
 import org.junit.Rule
 import org.junit.Test
 
-class MainActivityTest : BaseTest(){
+class MoviesActivityTest : BaseTest(){
 
 
     @get:Rule
-    val activityRule = ActivityTestRule(MainActivity::class.java, true, false)
+    val activityRule = ActivityTestRule(MoviesActivity::class.java, true, false)
 
 
     @Test

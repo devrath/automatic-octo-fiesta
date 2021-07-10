@@ -5,17 +5,13 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.code.Keys
 import com.example.code.Keys.VALID_PASSWORD
 import com.example.code.Keys.VALID_USER_NAME
 import com.example.code.R
 import com.example.code.core.platform.BaseActivity
 import com.example.code.databinding.ActivityLoginBinding
-import com.example.code.databinding.ActivityMainBinding
-import com.example.code.features.movies.MainActivity
-import dagger.hilt.EntryPoint
+import com.example.code.features.profile.ProfileActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 
@@ -66,7 +62,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
     }
 
     private fun successfulLogin() {
-        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+        startActivity(Intent(this@LoginActivity, ProfileActivity::class.java))
         finish()
     }
 
