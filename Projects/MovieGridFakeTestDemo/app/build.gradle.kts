@@ -69,6 +69,7 @@ dependencies {
 
     androidTestImplementation(AndroidTestLibraries.junit)
     androidTestImplementation(AndroidTestLibraries.testrules)
+    androidTestImplementation(AndroidTestLibraries.testCoreKtx)
     androidTestImplementation(AndroidTestLibraries.espresso)
     androidTestImplementation(AndroidTestLibraries.mockServer)
     androidTestImplementation(AndroidTestLibraries.idlingResource)

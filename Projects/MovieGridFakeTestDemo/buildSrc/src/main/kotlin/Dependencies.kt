@@ -109,9 +109,11 @@ object AndroidTestLibraries {
         const val okhttp3IdlingResource = "1.0.0"
         const val hilt = BuildPlugins.Versions.hilt
         const val googleTruth = "1.1.3"
+        const val testCoreKtx = "1.4.0"
     }
     const val junit                 = "androidx.test.ext:junit:${Versions.junit}"
     const val testrules             = "androidx.test:rules:${Versions.testrules}"
+    const val testCoreKtx             = "androidx.test:core-ktx:${Versions.testCoreKtx}"
     const val espresso              = "androidx.test.espresso:espresso-core:${Versions.espresso_core}"
     const val mockServer            = "com.squareup.okhttp3:mockwebserver:${Versions.mockServer}"
     const val idlingResource        = "com.jakewharton.espresso:okhttp3-idling-resource:${Versions.okhttp3IdlingResource}"
