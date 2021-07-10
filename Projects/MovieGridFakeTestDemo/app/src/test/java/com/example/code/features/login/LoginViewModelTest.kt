@@ -1,15 +1,14 @@
 package com.example.code.features.login
 
 import com.example.code.base.BaseUnitTest
-import com.example.code.core.shared.data
 import com.example.code.core.usecases.LoginUseCase
 import com.example.code.utils.runBlockingTest
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.collect
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-import com.example.code.core.shared.Result
 
 @ExperimentalCoroutinesApi
 @RunWith(JUnit4::class)
@@ -17,7 +16,8 @@ class LoginViewModelTest : BaseUnitTest() {
 
 
     @Test
-    fun `test if successful login`() = coroutineRule.runBlockingTest  {
+    fun `test if successful login`() = coroutineRule.runBlockingTest {
+
         val dispatcher = coroutineRule.testDispatcher
         val loginUseCase = LoginUseCase(dispatcher)
 
@@ -25,27 +25,16 @@ class LoginViewModelTest : BaseUnitTest() {
         credentials["userName"] = "mail@example.com"
         credentials["password"] = "pass"
 
-        val result = loginUseCase.invoke(credentials)
+        val loginVM = LoginViewModel(loginUseCase)
 
-        assertThat(result.data)
-            .isEqualTo(Result.Success(LoginViewState.ViewStateSuccess("mail@example.com")))
+        loginVM.initiateLogin(userName = "mail@example.com", password = "pass")
+
+        val expectedValue = LoginViewState.ViewStateSuccess("mail@example.com")
+
+        loginVM.viewState.collect {
+            val resultValue = it as LoginViewState.ViewStateSuccess
+            assertThat(expectedValue.username).isEqualTo(resultValue.username)
+        }
     }
-
-    @Test
-    fun `test if error in login`() = coroutineRule.runBlockingTest {
-        val dispatcher = coroutineRule.testDispatcher
-        val loginUseCase = LoginUseCase(dispatcher)
-
-        val credentials = HashMap<String, String>()
-        credentials["userName"] = "wrong@example.com"
-        credentials["password"] = "pass"
-
-        val result = loginUseCase.invoke(credentials)
-
-        assertThat(result.data)
-            .isEqualTo(Result.Success(LoginViewState.ViewStateIncorrectName))
-    }
-
-
 
 }

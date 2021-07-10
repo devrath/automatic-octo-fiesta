@@ -2,6 +2,8 @@ package com.example.code.utils
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.cancelAndJoin
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runBlockingTest
@@ -29,5 +31,7 @@ class MainCoroutineRule(
 @ExperimentalCoroutinesApi
 fun MainCoroutineRule.runBlockingTest(block: suspend () -> Unit) =
     this.testDispatcher.runBlockingTest {
-        block()
+        launch {
+            block()
+        }.cancelAndJoin()
     }
