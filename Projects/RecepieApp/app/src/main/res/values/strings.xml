@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">EffectiveTesting</string>
+    <string name="app_name">code</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="empty">No recipes</string>
+    <string name="recipe_not_found">Recipe not found</string>
 </resources>
