@@ -54,7 +54,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
             is LoginViewState.ViewStateException -> Toast.makeText(this@LoginActivity,it.exception,Toast.LENGTH_LONG).show()
             is LoginViewState.ViewStateIncorrectName -> showError(R.string.msg_username_incorrect)
             is LoginViewState.ViewStateIncorrectPassword -> showError(R.string.msg_password_incorrect)
-            is LoginViewState.ViewStateIncorrectNamePassword -> showError(R.string.msg_username_password_incorrect)
             is LoginViewState.ViewStateSuccess -> successfulLogin()
         }
     }

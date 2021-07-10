@@ -88,14 +88,16 @@ object TestLibraries {
         const val coreTesting = "2.1.0"
         const val coroutinesTest = "1.5.0"
         const val mockServer = "4.9.1"
+        const val googleTruth = "1.1.3"
     }
     const val junit4            = "junit:junit:${Versions.junit4}"
     const val mockitoKotlin     = "com.nhaarman.mockitokotlin2:mockito-kotlin:${Versions.mockitoKotlin}"
     const val mockitoInline     = "org.mockito:mockito-inline:${Versions.mockitoInline}"
     const val mockitoCore       = "org.mockito:mockito-core:${Versions.mockitoCore}"
     const val coreTesting       = "androidx.arch.core:core-testing:${Versions.coreTesting}"
-    const val coroutinesTest     = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}"
-    const val mockServer     = "com.squareup.okhttp3:mockwebserver:${Versions.mockServer}"
+    const val coroutinesTest    = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}"
+    const val mockServer        = "com.squareup.okhttp3:mockwebserver:${Versions.mockServer}"
+    const val googleTruthLib    = "com.google.truth:truth:${Versions.googleTruth}"
 }
 
 object AndroidTestLibraries {
@@ -106,6 +108,7 @@ object AndroidTestLibraries {
         const val mockServer = "4.9.1"
         const val okhttp3IdlingResource = "1.0.0"
         const val hilt = BuildPlugins.Versions.hilt
+        const val googleTruth = "1.1.3"
     }
     const val junit                 = "androidx.test.ext:junit:${Versions.junit}"
     const val testrules             = "androidx.test:rules:${Versions.testrules}"
@@ -113,6 +116,7 @@ object AndroidTestLibraries {
     const val mockServer            = "com.squareup.okhttp3:mockwebserver:${Versions.mockServer}"
     const val idlingResource        = "com.jakewharton.espresso:okhttp3-idling-resource:${Versions.okhttp3IdlingResource}"
     const val hiltAndroidTesting    = "com.google.dagger:hilt-android-testing:${Versions.hilt}"
+    const val googleTruthLib    = "com.google.truth:truth:${Versions.googleTruth}"
 }
 
 object KaptAndroidTest {

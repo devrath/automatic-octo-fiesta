@@ -31,7 +31,6 @@ class LoginUseCase @Inject constructor(
                         password.isEmpty() -> coroutine.resume(Result.Success(LoginViewState.ViewStatePasswordEmpty))
                         userName != VALID_USER_NAME -> coroutine.resume(Result.Success(LoginViewState.ViewStateIncorrectName))
                         password != VALID_PASSWORD -> coroutine.resume(Result.Success(LoginViewState.ViewStateIncorrectPassword))
-                        userName != VALID_USER_NAME && password != VALID_PASSWORD -> coroutine.resume(Result.Success(LoginViewState.ViewStateIncorrectNamePassword))
                         userName == VALID_USER_NAME && password == VALID_PASSWORD -> coroutine.resume(Result.Success(LoginViewState.ViewStateSuccess(username = userName)))
                     }
                 }

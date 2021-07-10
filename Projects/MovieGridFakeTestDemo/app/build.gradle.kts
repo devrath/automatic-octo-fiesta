@@ -65,6 +65,7 @@ dependencies {
     testImplementation(TestLibraries.coreTesting)
     testImplementation(TestLibraries.coroutinesTest)
     testImplementation(TestLibraries.mockServer)
+    testImplementation(TestLibraries.googleTruthLib)
 
     androidTestImplementation(AndroidTestLibraries.junit)
     androidTestImplementation(AndroidTestLibraries.testrules)
@@ -72,5 +73,7 @@ dependencies {
     androidTestImplementation(AndroidTestLibraries.mockServer)
     androidTestImplementation(AndroidTestLibraries.idlingResource)
     androidTestImplementation(AndroidTestLibraries.hiltAndroidTesting)
+    androidTestImplementation(AndroidTestLibraries.googleTruthLib)
+
 
 }
