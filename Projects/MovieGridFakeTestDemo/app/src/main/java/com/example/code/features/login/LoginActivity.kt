@@ -3,11 +3,7 @@ package com.example.code.features.login
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.lifecycleScope
-import com.example.code.R
-import com.example.code.core.utils.onFailure
-import com.example.code.core.utils.onSuccess
 import com.example.code.databinding.ActivityLoginBinding
 import kotlinx.coroutines.flow.collect
 
@@ -35,12 +31,12 @@ class LoginActivity : AppCompatActivity() {
 
     private fun observeLiveData() {
         lifecycleScope.launchWhenStarted {
-            viewModel.viewStateChannelList.collect {
-                it.onSuccess { value ->
+            viewModel.viewState.collect { view : LoginViewState ->
 
-                }
-                it.onFailure {
-
+                when(view){
+                    LoginViewState.ViewStatePasswordEmpty -> TODO()
+                    LoginViewState.ViewStateNameEmpty -> TODO()
+                    LoginViewState.LoginInitialState -> TODO()
                 }
             }
         }
