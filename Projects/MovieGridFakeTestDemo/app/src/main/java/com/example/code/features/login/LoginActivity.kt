@@ -11,24 +11,21 @@ import com.example.code.Keys
 import com.example.code.Keys.VALID_PASSWORD
 import com.example.code.Keys.VALID_USER_NAME
 import com.example.code.R
+import com.example.code.core.platform.BaseActivity
 import com.example.code.databinding.ActivityLoginBinding
+import com.example.code.databinding.ActivityMainBinding
 import com.example.code.features.movies.MainActivity
 import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
-class LoginActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityLoginBinding
+class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::inflate) {
 
     private val viewModel : LoginViewModel by viewModels()
 
-    private val TAG = this.javaClass.simpleName
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setClickListeners()
         observeLiveData()

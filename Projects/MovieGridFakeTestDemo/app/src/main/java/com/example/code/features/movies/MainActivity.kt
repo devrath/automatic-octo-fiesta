@@ -15,19 +15,16 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
 
 
     @Inject
     lateinit var moviesAdapter: MoviesAdapter
     private val moviesViewModel: MoviesViewModel by viewModels()
-    private lateinit var binding: ActivityMainBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         initializeView()
         loadMoviesList()
         with(moviesViewModel) {
