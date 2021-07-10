@@ -26,7 +26,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
         setClickListeners()
         observeLiveData()
     }
@@ -73,11 +72,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(ActivityLoginBinding::i
     }
 
     private fun showError(msg: Int) {
-        val builder = AlertDialog.Builder(this)
-        builder
-            .setMessage(msg)
-            .setPositiveButton(R.string.ok, null)
-            .show()
+        AlertDialog.Builder(this).setMessage(msg).setPositiveButton(R.string.ok, null).show()
     }
 
 }
