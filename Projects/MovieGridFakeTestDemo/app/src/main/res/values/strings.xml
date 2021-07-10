@@ -36,4 +36,11 @@
     <string name="username_pwd_error">Enter valid username and password</string>
     <string name="password_error">Enter valid password</string>
     <string name="my_movies">My Movies</string>
+
+    <string name="msg_username_empty">User-name field is empty</string>
+    <string name="msg_password_empty">Password field is empty</string>
+    <string name="msg_password_incorrect">Password entered is incorrect</string>
+    <string name="msg_username_incorrect">User-name entered is incorrect</string>
+    <string name="msg_username_password_incorrect">User-name and password entered is incorrect</string>
+
 </resources>

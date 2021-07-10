@@ -1,5 +1,7 @@
 package com.example.code.core.usecases
 
+import com.example.code.Keys.VALID_PASSWORD
+import com.example.code.Keys.VALID_USER_NAME
 import com.example.code.models.User
 import com.example.code.core.shared.SuspendUseCase
 import com.example.code.core.shared.dispatcher.IoDispatcher
@@ -14,11 +16,6 @@ import kotlin.coroutines.resume
 class LoginUseCase @Inject constructor(
     @IoDispatcher dispatcher: CoroutineDispatcher
 ) : SuspendUseCase<HashMap<String, String>, Result<LoginViewState>>(dispatcher) {
-
-    companion object {
-        const val VALID_USER_NAME = "mail@example.com"
-        const val VALID_PASSWORD = "pass"
-    }
 
     override suspend fun execute(parameters: HashMap<String, String>): Result<LoginViewState> =
 
