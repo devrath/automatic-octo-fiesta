@@ -43,15 +43,6 @@ This repository contains a collection of projects and information regarding test
 
 ## Applications
 
-### *`RecepieApp`*
-
-`Description`: In this application, There are some recipes in assets, we need to parse the recipes and display them in a list view, and on click of each row in the recipe list we need to display a detailed screen of that recipe and we can set the recipe as favorite and store the selection in shared preferences.
-
-* Using espresso tool both in *Instrumentation test* and *unit test*
-* Setting *custom test runner*, This is useful in switching the mode of storing the key/value pairs for shared preferences
-* Using *robot pattern* - > Useful in separating what from how while writing the tests
-* Testing elements that involve *context* -> How to test the functions that use context
-
 ### *`ImdbMoviesApp`*
 **`Correct credentials`**: name: `mail@example.com`, password: `pass`
 
@@ -65,6 +56,15 @@ This repository contains a collection of projects and information regarding test
 * For the Instrumentation tests, we are using a Mock server to run tests so that our tests are not dependent on external service for tests.
 * The Instrumentation tests follow robot pattern to separate what from how Thus increasing the lifetime of test cases due to change is a requirement.
 * In the unit tests we are using the concept of faking in order to mimic the repository, service, and API involved.
+
+### *`RecepieApp`*
+
+`Description`: In this application, There are some recipes in assets, we need to parse the recipes and display them in a list view, and on click of each row in the recipe list we need to display a detailed screen of that recipe and we can set the recipe as favorite and store the selection in shared preferences.
+
+* Using espresso tool both in *Instrumentation test* and *unit test*
+* Setting *custom test runner*, This is useful in switching the mode of storing the key/value pairs for shared preferences
+* Using *robot pattern* - > Useful in separating what from how while writing the tests
+* Testing elements that involve *context* -> How to test the functions that use context
 
 
 ***
