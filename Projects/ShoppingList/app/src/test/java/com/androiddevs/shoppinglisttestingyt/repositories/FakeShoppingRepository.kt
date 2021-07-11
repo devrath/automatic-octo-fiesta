@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.androiddevs.shoppinglisttestingyt.data.local.ShoppingItem
 import com.androiddevs.shoppinglisttestingyt.data.remote.responses.ImageResponse
-import com.androiddevs.shoppinglisttestingyt.di.Resource
+import com.androiddevs.shoppinglisttestingyt.other.Resource
 
 class FakeShoppingRepository : ShoppingRepository {
 
