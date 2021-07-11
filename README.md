@@ -9,7 +9,6 @@
 <a><img src="https://img.shields.io/badge/Test Pattern-Robot%20Pattern-purple"></a>
 <a><img src="https://img.shields.io/badge/Test Server-Mock%20Server-yellow"></a>
 <a><img src="https://img.shields.io/badge/Code coverage-Jacoco-orange"></a>
-<a><img src="https://img.shields.io/badge/Dependency Injection-Hilt-DarkKhaki"></a>
 </p>
 
 * **`Check wiki tab above to access the documentation and some use cases and case studies for the project`**  
