@@ -5,10 +5,11 @@
 This repository contains a collection of projects and information regarding testing in android 
 
 
-| Applications | Architecture used |
-| ------------ | ----------------- |
-| [ImdbMoviesApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---ImdbMoviesApp) | Clean Architecture |
-| [RecepieApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---RecepieApp) | |
+| Applications | Architecture used | Source code |
+| ------------ | ----------------- | ----------- |
+| [ImdbMoviesApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---ImdbMoviesApp) | Clean Architecture | [*Check here*](https://github.com/devrath/automatic-octo-fiesta/tree/main/Projects/ImdbMoviesApp) |
+| [RecepieApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---RecepieApp) | | [*Check here*](https://github.com/devrath/automatic-octo-fiesta/tree/main/Projects/RecepieApp) |
+
 
 
 | **`Useful Test Libraries`** | **`Description`** | **`Online link`** |
