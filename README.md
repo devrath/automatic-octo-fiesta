@@ -7,22 +7,6 @@ This repository contains a collection of projects and information regarding test
 
 | Applications | Architecture used |
 | ------------ | ----------------- |
-| [RecepieApp](https://github.com/devrath/automatic-octo-fiesta/wiki#recepieapp) | |
-| [ImdbMoviesApp](https://github.com/devrath/automatic-octo-fiesta/wiki#imdbmoviesapp) | Clean Architecture |
-
-
-| **`Useful Test Libraries`** | **`Description`** | **`Online link`** |
-| --------------------- | ----------- | ------------------------------|
-| **Google fluent assertions** | `Truth - Fluent assertions for Java and Android` | [website](https://truth.dev/) |
-| **MockWebServer** | `This is used to simulate the remote API locally for instrumentation tests` | [website](https://github.com/square/okhttp/tree/master/mockwebserver) |
-| **MockK** | `Helpful for writing unit tests similar to espresso with pure kotlin based DSL` | [website](https://mockk.io/ANDROID.html) |
-
-
-| About Unit Testing | Test doubles | Templates in test | Test Patterns | Code coverage |
-Welcome to the automatic-octo-fiesta wiki!
-
-| Applications | Architecture used |
-| ------------ | ----------------- |
 | [ImdbMoviesApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---ImdbMoviesApp) | Clean Architecture |
 | [RecepieApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---RecepieApp) | |
 
