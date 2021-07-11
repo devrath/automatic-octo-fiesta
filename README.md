@@ -6,19 +6,17 @@
 <a><img src="https://img.shields.io/badge/Kotlin--Dsl-For--Dependencies-red"></a>
 <a><img src="https://img.shields.io/badge/Hilt-Dependency%20Injection-green"></a>
 <a><img src="https://img.shields.io/badge/Architecture-Clean%20Architecture-pink"></a>
+<a><img src="https://img.shields.io/badge/Test Pattern-Robot%20Pattern-purple"></a>
+<a><img src="https://img.shields.io/badge/Test Server-Mock%20Server-yellow"></a>
+<a><img src="https://img.shields.io/badge/Code coverage-Jacoco-orange"></a>
+<a><img src="https://img.shields.io/badge/Dependency Injection-Hilt-DarkKhaki"></a>
 </p>
 
-* **`Check wiki tab above to access the documentation and some use cases`**  
+* **`Check wiki tab above to access the documentation and some use cases and case studies for the project`**  
 * **`By using kotlin programming language, This is a clean architecture developed to demonstrate the usage of clean code`** 
 
 ---
 ![Banner](https://github.com/devrath/automatic-octo-fiesta/blob/main/images/clean_arch_banner.png)
-
-
-<p align="center">
-<a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>
-</p>
-
 
 This repository contains a collection of projects and information regarding testing in android 
 
@@ -31,3 +29,7 @@ This repository contains a collection of projects and information regarding test
 
 
 ***
+
+<p align="center">
+<a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>
+</p>
