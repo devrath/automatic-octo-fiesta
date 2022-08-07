@@ -42,7 +42,7 @@
 * [ShoppingApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---ShoppingApp) 
 
 
-# **`𝙾𝚞𝚛 𝙳𝚎𝚖𝚘 𝙰𝚙𝚙𝚕𝚒𝚌𝚊𝚝𝚒𝚘𝚗 𝚍𝚎𝚜𝚌𝚛𝚒𝚙𝚝𝚒𝚘𝚗`**
+## **`𝙾𝚞𝚛 𝙳𝚎𝚖𝚘 𝙰𝚙𝚙𝚕𝚒𝚌𝚊𝚝𝚒𝚘𝚗 𝚍𝚎𝚜𝚌𝚛𝚒𝚙𝚝𝚒𝚘𝚗`**
 * **[ImdbMoviesApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---ImdbMoviesApp)**
 * **Architecture Used**:  `Clean Architecture` 
 * **[Source code](https://github.com/devrath/automatic-octo-fiesta/tree/main/Projects/ImdbMoviesApp)** 
