@@ -1,23 +1,22 @@
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kotlin_Icon.svg/512px-Kotlin_Icon.svg.png" align="right" title="Kotlin Logo" width="120">
+
 # automatic-octo-fiesta
+<img src="https://img.shields.io/badge/Retrofit-For--Network-lightgrey"> <img src="https://img.shields.io/badge/Kotlin--Dsl-For--Dependencies-red"> <img src="https://img.shields.io/badge/Hilt-Dependency%20Injection-green"> <img src="https://img.shields.io/badge/Architecture-Clean%20Architecture-pink"> <img src="https://img.shields.io/badge/Test Pattern-Robot%20Pattern-purple"> <img src="https://img.shields.io/badge/Test Server-Mock%20Server-yellow"> <img src="https://img.shields.io/badge/Code coverage-Jacoco-orange">
+
 ![Banner](https://github.com/devrath/automatic-octo-fiesta/blob/main/images/banner.png)
 
-<p align="center">
-<a><img src="https://img.shields.io/badge/Retrofit-For--Network-lightgrey"></a>
-<a><img src="https://img.shields.io/badge/Kotlin--Dsl-For--Dependencies-red"></a>
-<a><img src="https://img.shields.io/badge/Hilt-Dependency%20Injection-green"></a>
-<a><img src="https://img.shields.io/badge/Architecture-Clean%20Architecture-pink"></a>
-<a><img src="https://img.shields.io/badge/Test Pattern-Robot%20Pattern-purple"></a>
-<a><img src="https://img.shields.io/badge/Test Server-Mock%20Server-yellow"></a>
-<a><img src="https://img.shields.io/badge/Code coverage-Jacoco-orange"></a>
-</p>
+## **`𝙸𝚗𝚝𝚛𝚘𝚍𝚞𝚌𝚝𝚒𝚘𝚗`** 💡
+:label: By using kotlin programming language, This is a clean architecture developed to demonstrate the usage of clean code </br>
+:label: There are multiple projects that contains samples of the code used for testing and learning many concepts of unit testing </br>
+:label: There is one main full fledge application where concepts are implemented for demo
 
-* **`Check wiki tab above to access the documentation and some use cases and case studies for the project`**  
-* **`By using kotlin programming language, This is a clean architecture developed to demonstrate the usage of clean code`** 
 
 ---
 ![Banner](https://github.com/devrath/automatic-octo-fiesta/blob/main/images/clean_arch_banner.png)
 
-This repository contains a collection of projects and information regarding testing in android 
+
+
+
 
 # Our Demo Application
 * **[ImdbMoviesApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---ImdbMoviesApp)**
