@@ -6,9 +6,9 @@
 ![Banner](https://github.com/devrath/automatic-octo-fiesta/blob/main/images/banner.png)
 
 ## **`𝙸𝚗𝚝𝚛𝚘𝚍𝚞𝚌𝚝𝚒𝚘𝚗`** 💡
-:label: By using kotlin programming language, This is a clean architecture developed to demonstrate the usage of clean code </br>
-:label: There are multiple projects that contains samples of the code used for testing and learning many concepts of unit testing </br>
-:label: There is one main full fledge application where concepts are implemented for demo
+:label: By using kotlin programming language, This is a clean architecture developed to demonstrate the usage of clean code. </br>
+:label: There are multiple projects that contains samples of the code used for testing & learning many concepts of unit testing. </br>
+:label: There is one main full fledge application where concepts are implemented for demo.
 
 
 ---
