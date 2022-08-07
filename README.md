@@ -15,7 +15,6 @@
 ![Banner](https://github.com/devrath/automatic-octo-fiesta/blob/main/images/clean_arch_banner.png)
 
 
-
 | **`Useful Test Libraries`** | **`Description`** | **`Online link`** |
 | --------------------- | ----------- | ------------------------------|
 | **Google fluent assertions** | `Truth - Fluent assertions for Java and Android` | [website](https://truth.dev/) |
@@ -37,17 +36,33 @@
 | [What is ActivityTestRule](https://github.com/devrath/automatic-octo-fiesta/wiki/What-is-ActivityTestRule) | [Using TestCoroutineDispatcher](https://github.com/devrath/automatic-octo-fiesta/wiki/Using-TestCoroutineDispatcher) | 
 | | [Why do we need a Dispatcher as a rule to test coroutines](https://github.com/devrath/automatic-octo-fiesta/wiki/Why-do-we-need-a-Dispatcher-as-a-rule-to-test-coroutines) | | |  
 
+## **`𝙲𝚊𝚜𝚎 𝚂𝚝𝚞𝚍𝚒𝚎𝚜`**
+* [MockKApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application-MockKApp) 
+* [RecepieApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---RecepieApp) 
+* [ShoppingApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---ShoppingApp) 
 
 
-# Our Demo Application
+# **`𝙾𝚞𝚛 𝙳𝚎𝚖𝚘 𝙰𝚙𝚙𝚕𝚒𝚌𝚊𝚝𝚒𝚘𝚗 𝚍𝚎𝚜𝚌𝚛𝚒𝚙𝚝𝚒𝚘𝚗`**
 * **[ImdbMoviesApp](https://github.com/devrath/automatic-octo-fiesta/wiki/Application---ImdbMoviesApp)**
 * **Architecture Used**:  `Clean Architecture` 
 * **[Source code](https://github.com/devrath/automatic-octo-fiesta/tree/main/Projects/ImdbMoviesApp)** 
 
+<div align="center">
 <img src="https://github.com/devrath/automatic-octo-fiesta/blob/main/images/demo.gif" width="320" height="660"/>
+</div>
 
+## **`𝙲𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚎`** 🙋‍♂️
+Read [contribution guidelines](CONTRIBUTING.md) for more information regarding contribution.
 
-***
+## **`𝙵𝚎𝚎𝚍𝚋𝚊𝚌𝚔`** ✍️ 
+Feature requests are always welcome, [File an issue here](https://github.com/devrath/droid-pure-kotlin-application/issues/new).
+
+## **`𝙵𝚒𝚗𝚍 𝚝𝚑𝚒𝚜 𝚙𝚛𝚘𝚓𝚎𝚌𝚝 𝚞𝚜𝚎𝚏𝚞𝚕`** ? ❤️
+Support it by clicking the ⭐ button on the upper right of this page. ✌️
+
+## **`𝙻𝚒𝚌𝚎𝚗𝚜𝚎`** ![Licence](https://img.shields.io/github/license/google/docsy) :credit_card:
+This project is licensed under the Apache License 2.0 - see the [LICENSE](https://github.com/devrath/droid-pure-kotlin-application/blob/main/LICENSE) file for details
+
 
 <p align="center">
 <a><img src="https://forthebadge.com/images/badges/built-for-android.svg"></a>
